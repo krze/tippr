@@ -31,6 +31,7 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     @IBAction func onEditingChanged(sender: AnyObject) {
         var selectedIndex = defaultTipControl.selectedSegmentIndex
         println("Current selected index is \(selectedIndex)")
@@ -38,6 +39,7 @@ class SettingsViewController: UIViewController {
         defaults.synchronize()
         println("Saved selected index is \(selectedIndex)")
     }
+
     
     /*
     // MARK: - Navigation

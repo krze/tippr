@@ -122,7 +122,7 @@
                                     <segment title="22%"/>
                                 </segments>
                                 <connections>
-                                    <action selector="onEditingChanged:" destination="1Kz-JN-YHb" eventType="valueChanged" id="HgS-VI-SDe"/>
+                                    <action selector="onEditingChanged:" destination="1Kz-JN-YHb" eventType="valueChanged" id="tIA-ov-CiD"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Tip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y5v-Mu-3Eo">
@@ -145,6 +145,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="defaultTipControl" destination="WDV-04-Aeu" id="sxY-pk-c2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hBy-jr-XrW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
