@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		64A995891B89269700C93CA2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A995881B89269700C93CA2 /* SettingsViewController.swift */; };
+		64A9958C1B89277E00C93CA2 /* SettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9958B1B89277E00C93CA2 /* SettingsConstants.swift */; };
 		64BF43831B88DEB3009BCCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */; };
 		64BF43851B88DEB3009BCCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF43841B88DEB3009BCCE2 /* ViewController.swift */; };
 		64BF43881B88DEB4009BCCE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64BF43861B88DEB4009BCCE2 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		64A995881B89269700C93CA2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		64A9958B1B89277E00C93CA2 /* SettingsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsConstants.swift; sourceTree = "<group>"; };
 		64BF437D1B88DEB3009BCCE2 /* tippr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BF43811B88DEB3009BCCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		64A9958A1B8926A000C93CA2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				64A995881B89269700C93CA2 /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -87,10 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				64A9958A1B8926A000C93CA2 /* ViewControllers */,
-				64A995881B89269700C93CA2 /* SettingsViewController.swift */,
 				64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */,
 				64BF43841B88DEB3009BCCE2 /* ViewController.swift */,
 				64BF43861B88DEB4009BCCE2 /* Main.storyboard */,
+				64A9958B1B89277E00C93CA2 /* SettingsConstants.swift */,
 				64BF43891B88DEB4009BCCE2 /* Images.xcassets */,
 				64BF438B1B88DEB4009BCCE2 /* LaunchScreen.xib */,
 				64BF43801B88DEB3009BCCE2 /* Supporting Files */,
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A9958C1B89277E00C93CA2 /* SettingsConstants.swift in Sources */,
 				64BF43851B88DEB3009BCCE2 /* ViewController.swift in Sources */,
 				64BF43831B88DEB3009BCCE2 /* AppDelegate.swift in Sources */,
 				64A995891B89269700C93CA2 /* SettingsViewController.swift in Sources */,
