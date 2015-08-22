@@ -18,15 +18,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     
     var defaults = NSUserDefaults.standardUserDefaults()
-    var lastDefaultTipIndex = defaults.objectForKey("default_tip")
-
+    
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         if (defaults.objectForKey("default_tip") != nil)  {
             self.tipControl.selectedSegmentIndex = defaults.objectForKey("default_tip") as! Int
         }
     }
-    KK
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

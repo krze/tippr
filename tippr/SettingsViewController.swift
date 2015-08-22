@@ -13,18 +13,20 @@ class SettingsViewController: UIViewController {
     var defaults = NSUserDefaults.standardUserDefaults()
     let tipConstants = SettingsConstants()
     
-    
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        if (defaults.objectForKey("default_tip") != nil) {
-            self.defaultTipControl.selectedSegmentIndex = defaults.objectForKey("default_tip") as! Int
-        }
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(true)
+//
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        var currentDefaultTipIndex = defaults.objectForKey("default_tip") as! Int
         // Do any additional setup after loading the view.
-        
+        //        println(defaults.objectForKey("default_tip") as! Int)
+        if (currentDefaultTipIndex >= 0) {
+            //            println()
+            self.defaultTipControl.selectedSegmentIndex = currentDefaultTipIndex
+        }
     }
     
     override func didReceiveMemoryWarning() {
