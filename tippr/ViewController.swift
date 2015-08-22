@@ -15,9 +15,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     override func viewDidLoad() {
-        // Dragging the Value Changed event to onEditingChanged() did NOT work for me as in the video. It would not allow me to link the event.
-        // I had to do this programmatically
-//        self.tipControl.addTarget(self, action: Selector("onEditingChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.00"
