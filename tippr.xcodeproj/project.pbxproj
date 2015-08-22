@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64A995891B89269700C93CA2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A995881B89269700C93CA2 /* SettingsViewController.swift */; };
 		64BF43831B88DEB3009BCCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */; };
 		64BF43851B88DEB3009BCCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF43841B88DEB3009BCCE2 /* ViewController.swift */; };
 		64BF43881B88DEB4009BCCE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64BF43861B88DEB4009BCCE2 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64A995881B89269700C93CA2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		64BF437D1B88DEB3009BCCE2 /* tippr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BF43811B88DEB3009BCCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64A9958A1B8926A000C93CA2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		64BF43741B88DEB3009BCCE2 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +86,8 @@
 		64BF437F1B88DEB3009BCCE2 /* tippr */ = {
 			isa = PBXGroup;
 			children = (
+				64A9958A1B8926A000C93CA2 /* ViewControllers */,
+				64A995881B89269700C93CA2 /* SettingsViewController.swift */,
 				64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */,
 				64BF43841B88DEB3009BCCE2 /* ViewController.swift */,
 				64BF43861B88DEB4009BCCE2 /* Main.storyboard */,
@@ -214,6 +225,7 @@
 			files = (
 				64BF43851B88DEB3009BCCE2 /* ViewController.swift in Sources */,
 				64BF43831B88DEB3009BCCE2 /* AppDelegate.swift in Sources */,
+				64A995891B89269700C93CA2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				64BF439E1B88DEB4009BCCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64BF439F1B88DEB4009BCCE2 /* Build configuration list for PBXNativeTarget "tipprTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				64BF43A11B88DEB4009BCCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
