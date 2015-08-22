@@ -9,6 +9,7 @@
 import Foundation
 
 struct SettingsConstants {
+    // Constants for the app such as percentage values as doubles, currency signs, etc
     let percentages = [0.18, 0.2, 0.22]
-    let currencySymbol = ["US": "$", "UK": "£", "JPN": "Y"]
+    let currencySymbol = ["US": "$", "UK": "£", "JPN": "¥"]
 }
