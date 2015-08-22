@@ -20,17 +20,22 @@ class ViewController: UIViewController {
     var defaults = NSUserDefaults.standardUserDefaults()
     
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        if (defaults.objectForKey("default_tip") != nil)  {
-            self.tipControl.selectedSegmentIndex = defaults.objectForKey("default_tip") as! Int
-        }
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        super.viewWillAppear(true)
+//        if (defaults.objectForKey("default_tip") != nil)  {
+//            self.tipControl.selectedSegmentIndex = defaults.objectForKey("default_tip") as! Int
+//        }
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        
+        if (defaults.objectForKey("default_tip") != nil)  {
+            self.tipControl.selectedSegmentIndex = defaults.objectForKey("default_tip") as! Int
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

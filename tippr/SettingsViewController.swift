@@ -14,19 +14,16 @@ class SettingsViewController: UIViewController {
     let tipConstants = SettingsConstants()
     
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(true)
-//
-//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        var currentDefaultTipIndex = defaults.objectForKey("default_tip") as! Int
-        // Do any additional setup after loading the view.
-        //        println(defaults.objectForKey("default_tip") as! Int)
-        if (currentDefaultTipIndex >= 0) {
-            //            println()
-            self.defaultTipControl.selectedSegmentIndex = currentDefaultTipIndex
-        }
+//        var currentDefaultTipIndex = defaults.objectForKey("default_tip") as! Int
+//        if let defaultTipSegment = self.defaultTipControl {
+//            defaultTipSegment.selectedSegmentIndex = currentDefaultTipIndex
+//        }
+        var yep = defaults.objectForKey("default_tip")
+        println("Current selected index is \(yep)")
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,8 +33,10 @@ class SettingsViewController: UIViewController {
     
     @IBAction func onEditingChanged(sender: AnyObject) {
         var selectedIndex = defaultTipControl.selectedSegmentIndex
+        println("Current selected index is \(selectedIndex)")
         defaults.setInteger(selectedIndex, forKey: "default_tip")
         defaults.synchronize()
+        println("Saved selected index is \(selectedIndex)")
     }
     
     /*
