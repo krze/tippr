@@ -17,16 +17,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    var defaults = NSUserDefaults.standardUserDefaults()
-    
+    var userDefaults = NSUserDefaults.standardUserDefaults()
     
     override func viewWillAppear(animated: Bool) {
         // I want to put in a check here where, if the default was not changed since the last time this view was loaded, it won't change the segmented control for tip on this screen. Therefore, if you change the tip value on this view, go to settings, don't change the default, then return back to the main view, the value is not reset to the default value
         
-        // If the default tip is not nil, it will set the value to the saved default tip.
+        
         super.viewWillAppear(true)
-        if (defaults.objectForKey("default_tip") != nil)  {
-            self.tipControl.selectedSegmentIndex = defaults.objectForKey("default_tip") as! Int
+        userDefaults.synchronize()
+        // Preserves the state of the temporary tip
+        if TemporaryTip.sharedInstance.tipWasChanged {
+            self.tipControl.selectedSegmentIndex = TemporaryTip.sharedInstance.temporaryTipValue
+        }
+        // Sets the tip to the default tip if you have not set a temporary tip
+        if ((userDefaults.objectForKey("default_tip") != nil) && !TemporaryTip.sharedInstance.tipWasChanged)  {
+            self.tipControl.selectedSegmentIndex = userDefaults.objectForKey("default_tip") as! Int
         }
     }
     override func viewDidLoad() {
@@ -52,6 +57,9 @@ class ViewController: UIViewController {
         
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        TemporaryTip.sharedInstance.tipWasChanged = true
+        TemporaryTip.sharedInstance.temporaryTipValue = tipControl.selectedSegmentIndex
         
     }
     

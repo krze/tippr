@@ -10,17 +10,19 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    var defaults = NSUserDefaults.standardUserDefaults()
+    var userDefaults = NSUserDefaults.standardUserDefaults()
     let tipConstants = SettingsConstants()
     
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
+        // On loading the view, confirms that the user has not changed defaults
+        Defaults.sharedInstance.tipWasChanged = false
         // Checks to see if there is a default tip. If it's nil it sets it to the current default index to avoid a crash.
         var currentDefaultTipIndex = Int()
-        if (defaults.objectForKey("default_tip") != nil) {
-            currentDefaultTipIndex = defaults.objectForKey("default_tip") as! Int
+        if (userDefaults.objectForKey("default_tip") != nil) {
+            currentDefaultTipIndex = userDefaults.objectForKey("default_tip") as! Int
         }
         // If the default tip is not the selected tip, it sets the default tip to the right index to indicate the default tip.
         if (currentDefaultTipIndex != defaultTipControl.selectedSegmentIndex) {
@@ -40,8 +42,10 @@ class SettingsViewController: UIViewController {
     @IBAction func onEditingChanged(sender: AnyObject) {
         // Sets the newly chosen value as the default tip in NSUserDefaults and syncs
         var selectedIndex = defaultTipControl.selectedSegmentIndex
-        defaults.setInteger(selectedIndex, forKey: "default_tip")
-        defaults.synchronize()
+        // Indicates that the user did change defaults
+        Defaults.sharedInstance.tipWasChanged = true
+        userDefaults.setInteger(selectedIndex, forKey: "default_tip")
+        userDefaults.synchronize()
     }
 
     

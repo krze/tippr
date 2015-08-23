@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644365751B8A34740029EB39 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644365741B8A34740029EB39 /* Defaults.swift */; };
 		64A995891B89269700C93CA2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A995881B89269700C93CA2 /* SettingsViewController.swift */; };
 		64A9958C1B89277E00C93CA2 /* SettingsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9958B1B89277E00C93CA2 /* SettingsConstants.swift */; };
 		64BF43831B88DEB3009BCCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		644365741B8A34740029EB39 /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		64A995881B89269700C93CA2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		64A9958B1B89277E00C93CA2 /* SettingsConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsConstants.swift; sourceTree = "<group>"; };
 		64BF437D1B88DEB3009BCCE2 /* tippr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tippr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 				64A9958A1B8926A000C93CA2 /* ViewControllers */,
 				64BF43821B88DEB3009BCCE2 /* AppDelegate.swift */,
 				64BF43841B88DEB3009BCCE2 /* ViewController.swift */,
+				644365741B8A34740029EB39 /* Defaults.swift */,
 				64BF43861B88DEB4009BCCE2 /* Main.storyboard */,
 				64A9958B1B89277E00C93CA2 /* SettingsConstants.swift */,
 				64BF43891B88DEB4009BCCE2 /* Images.xcassets */,
@@ -228,6 +231,7 @@
 			files = (
 				64A9958C1B89277E00C93CA2 /* SettingsConstants.swift in Sources */,
 				64BF43851B88DEB3009BCCE2 /* ViewController.swift in Sources */,
+				644365751B8A34740029EB39 /* Defaults.swift in Sources */,
 				64BF43831B88DEB3009BCCE2 /* AppDelegate.swift in Sources */,
 				64A995891B89269700C93CA2 /* SettingsViewController.swift in Sources */,
 			);

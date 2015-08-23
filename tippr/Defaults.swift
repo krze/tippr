@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class Defaults {
+    var tipWasChanged = false
+    static let sharedInstance = Defaults()
+}
+
+class TemporaryTip {
+    var tipWasChanged = false
+    var temporaryTipValue = 0
+    static let sharedInstance = TemporaryTip()
+}
