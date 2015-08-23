@@ -20,9 +20,6 @@ class ViewController: UIViewController {
     var userDefaults = NSUserDefaults.standardUserDefaults()
     
     override func viewWillAppear(animated: Bool) {
-        // I want to put in a check here where, if the default was not changed since the last time this view was loaded, it won't change the segmented control for tip on this screen. Therefore, if you change the tip value on this view, go to settings, don't change the default, then return back to the main view, the value is not reset to the default value
-        
-        
         super.viewWillAppear(true)
         userDefaults.synchronize()
         // Preserves the state of the temporary tip
