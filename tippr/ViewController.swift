@@ -21,18 +21,22 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        userDefaults.synchronize()
         // Preserves the state of the temporary tip
         if TemporaryTip.sharedInstance.tipWasChanged {
             self.tipControl.selectedSegmentIndex = TemporaryTip.sharedInstance.temporaryTipValue
         }
         // Sets the tip to the default tip if you have not set a temporary tip
-        if ((userDefaults.objectForKey("default_tip") != nil) && !TemporaryTip.sharedInstance.tipWasChanged)  {
-            self.tipControl.selectedSegmentIndex = userDefaults.objectForKey("default_tip") as! Int
+        if let defaultTip: AnyObject = userDefaults.objectForKey("default_tip") {
+            if !TemporaryTip.sharedInstance.tipWasChanged {
+                self.tipControl.selectedSegmentIndex = defaultTip as! Int
+            }
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        if !TemporaryBill.sharedInstance.valueWasChanged {
+            billField.becomeFirstResponder()
+        }
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
@@ -57,6 +61,7 @@ class ViewController: UIViewController {
         
         TemporaryTip.sharedInstance.tipWasChanged = true
         TemporaryTip.sharedInstance.temporaryTipValue = tipControl.selectedSegmentIndex
+        TemporaryBill.sharedInstance.valueWasChanged = true
         
     }
     

@@ -18,3 +18,8 @@ class TemporaryTip {
     var temporaryTipValue = 0
     static let sharedInstance = TemporaryTip()
 }
+
+class TemporaryBill {
+    var valueWasChanged = false
+    static let sharedInstance = TemporaryBill()
+}
