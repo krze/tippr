@@ -21,8 +21,8 @@ class SettingsViewController: UIViewController {
         Defaults.sharedInstance.tipWasChanged = false
         // Checks to see if there is a default tip. If it's nil it sets it to the current default index to avoid a crash.
         var currentDefaultTipIndex = Int()
-        if (userDefaults.objectForKey("default_tip") != nil) {
-            currentDefaultTipIndex = userDefaults.objectForKey("default_tip") as! Int
+        if let defaultTip: AnyObject = userDefaults.objectForKey("default_tip") {
+            currentDefaultTipIndex = defaultTip as! Int
         }
         // If the default tip is not the selected tip, it sets the default tip to the right index to indicate the default tip.
         if (currentDefaultTipIndex != defaultTipControl.selectedSegmentIndex) {
